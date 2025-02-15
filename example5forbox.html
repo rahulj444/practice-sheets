@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Wrapping</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: auto;
+            border: 2px solid #0f0be5;
+            padding: 10px;
+            justify-content: center;
+            flex-direction:  row-reverse;/* here we have to change according to the follows */ 
+
+        }
+        .item {
+            width: calc(33.33% - 20px); 
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            border-radius: 8px;
+        }
+        div{
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <div>
+            empty div   has been created in the   empty div   has been created in the virtual mode of the speciality  virtual mode of the speciality empty div   has been created in the virtual mode of the speciality 
+        </div>
+        <div>
+            empty div   has been created in the   empty div   has been created in the virtual mode of the speciality  virtual mode of the speciality empty div   has been created in the virtual mode of the speciality 
+        </div>
+        <div>
+            empty div   has been created in the   empty div   has been created in the virtual mode of the speciality  virtual mode of the speciality empty div   has been created in the virtual mode of the speciality 
+        </div>
+    
+        <div class="item" style="color: blue;">1</div>
+        <div class="item" style="color: rgb(201, 14, 55);">2</div>
+        <div class="item" style="color: blue;">3</div>
+        <div class="item" style="color: blue;">4</div>
+        <div class="item" style="color: rgb(11, 11, 14);">5</div>
+        <div class="item" style="color: rgb(232, 22, 22);">6</div>
+        <div class="item" style="color: blue;">7</div>
+        <div class="item" style="color: blue;">8</div>
+        <div class="item" style="color: rgb(25, 24, 24);">9</div>
+        <div class="item" style="color: blue;">C</div>
+        <div class="item" style="color: blue;">0</div>
+        <div class="item" style="color: blue;">00</div>
+
+    </div>
+</body>
+</html>

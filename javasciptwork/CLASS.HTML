@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Class Example</title>
+</head>
+<body>
+  <h1>JavaScript Class Example</h1>
+  <div id="output"></div>
+
+  <script>
+    // Class Declaration
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // Instance method
+      greet() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+      }
+
+      // Static method
+      static describe() {
+        return "Person is a template for creating human instances.";
+      }
+    }
+
+    // Creating an instance of the class
+    const person1 = new Person("Rahul", 20);
+    const person2 = new Person("Rahul JAY", 21);
+
+
+    // Displaying outputs in the browser
+    const outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = `
+      <p>${person1.greet()}</p>
+      <p>${person2.greet()}</p>
+      <p>${Person.describe()}</p>
+    `;
+  </script>
+</body>
+</html>

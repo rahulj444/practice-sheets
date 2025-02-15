@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array, String, Date, Math</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #f4f8fb;
+        }
+        .title {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .methods {
+            margin-bottom: 10px;
+        }
+        .methods strong {
+            color: #007BFF;
+        }
+        pre {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            color: #28A745;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Object Examples: Array, String, Date, Math</h1>
+
+    <!-- Placeholder for output -->
+    <div id="output"></div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        // Function to create section elements
+        function createSection(title, description, methods, example, result) {
+            const section = document.createElement("div");
+            section.className = "section";
+
+            const titleElem = document.createElement("div");
+            titleElem.className = "title";
+            titleElem.textContent = title;
+
+            const descElem = document.createElement("div");
+            descElem.className = "description";
+            descElem.textContent = description;
+
+            const methodsElem = document.createElement("div");
+            methodsElem.className = "methods";
+            methodsElem.innerHTML = `<strong>Methods:</strong> ${methods}`;
+
+            const codeElem = document.createElement("pre");
+            codeElem.textContent = `Example:\n${example}`;
+
+            const resultElem = document.createElement("div");
+            resultElem.className = "output";
+            resultElem.textContent = `Result: ${result}`;
+
+            section.appendChild(titleElem);
+            section.appendChild(descElem);
+            section.appendChild(methodsElem);
+            section.appendChild(codeElem);
+            section.appendChild(resultElem);
+
+            outputDiv.appendChild(section);
+        }
+
+        // Array Example
+        let arr = [1, 2, 3, 4, 5];
+        arr.push(6);
+        arr.shift();
+        let mapped = arr.map(x => x * 2);
+        createSection(
+            "Array",
+            "Arrays are ordered collections of elements. Common operations include adding, removing, and transforming elements.",
+            "push(), pop(), shift(), unshift(), map(), filter(), reduce(), slice(), splice(), concat(), includes(), join(), sort(), reverse()",
+            `let arr = [1, 2, 3, 4, 5];
+arr.push(6); // Add to end
+arr.shift(); // Remove from start
+let mapped = arr.map(x => x * 2); // Multiply each element by 2`,
+            JSON.stringify(mapped) // Result
+        );
+
+        // String Example
+        let str = "Hello, JavaScript!";
+        let upperStr = str.toUpperCase();
+        let slicedStr = str.slice(7, 17);
+        let replacedStr = str.replace("JavaScript", "World");
+        createSection(
+            "String",
+            "Strings are sequences of characters. Methods allow manipulation like search, replace, split, etc.",
+            "toUpperCase(), toLowerCase(), slice(), substring(), replace(), replaceAll(), split(), includes(), startsWith(), endsWith(), trim()",
+            `let str = "Hello, JavaScript!";
+let upperStr = str.toUpperCase(); // Uppercase
+let slicedStr = str.slice(7, 17); // Extract a part
+let replacedStr = str.replace("JavaScript", "World"); // Replace`,
+            JSON.stringify({
+                upperStr,
+                slicedStr,
+                replacedStr
+            })
+        );
+
+        // Date Example
+        let now = new Date();
+        let specificDate = new Date(2025, 0, 1); // January 1, 2025
+        let isoString = now.toISOString();
+        createSection(
+            "Date",
+            "Date objects allow working with dates and times.",
+            "getFullYear(), getMonth(), getDate(), getDay(), toISOString(), toDateString(), toLocaleString()",
+            `let now = new Date();
+let specificDate = new Date(2025, 0, 1);
+let isoString = now.toISOString(); // Convert to ISO`,
+            JSON.stringify({
+                current: now.toDateString(),
+                specific: specificDate.toDateString(),
+                isoString: isoString
+            })
+        );
+
+        // Math Example
+        let pi = Math.PI;
+        let randomNum = Math.random();
+        let sqrtVal = Math.sqrt(16);
+        let maxVal = Math.max(10, 20, 30);
+        createSection(
+            "Math",
+            "The Math object provides mathematical constants and functions.",
+            "PI, random(), sqrt(), max(), min(), round(), ceil(), floor(), abs(), sin(), cos(), tan()",
+            `let pi = Math.PI;
+let randomNum = Math.random(); // Random 0-1
+let sqrtVal = Math.sqrt(16); // Square root of 16
+let maxVal = Math.max(10, 20, 30);`,
+            JSON.stringify({
+                pi,
+                randomNum,
+                sqrtVal,
+                maxVal
+            })
+        );
+    </script>
+</body>
+</html>

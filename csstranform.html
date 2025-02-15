@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+            background-color: lightblue;
+            display: inline-block;
+            transition: transform 0.7s ease;
+        }
+
+        .rotate {
+            transform: rotate(-30deg);
+        }
+
+        .scale {
+            transform: scale(1.5);
+        }
+
+        .translate {
+            transform: translate(50px, 50px);
+        }
+
+        .skew {
+            transform: skew(20deg, 10deg);
+        }
+
+        .combine {
+            transform: translate(50px, 50px) scale(1.2) rotate(30deg);
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box rotate">this is div tag</div>
+    <div class="box scale">RAHUL BHAi</div>
+    <div class="box translate" style="background-image: url(images/pexels-danielle-block-472754360-28292874.jpg); "  width: 100px;
+    height: 100px;
+    margin: 20px;>kamla harries</div>
+    <div class="box skew"></div>
+    <div class="box combine"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .layout {
+            padding: 20px;
+            text-align: center;
+        }
+        .mobile {
+            background-color: lightblue;
+        }
+        .tablet {
+            background-color: lightgreen;
+        }
+        .desktop {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout" id="layout">Loading layout...</div>
+
+    <script>
+        function applyLayout() {
+            const layout = document.getElementById("layout");
+            if (screen.width < 768) {
+                layout.textContent = "Mobile Layout Detected";
+                layout.className = "layout mobile";
+            } else if (screen.width < 1200) {
+                layout.textContent = "Tablet Layout Detected";
+                layout.className = "layout tablet";
+            } else {
+                layout.textContent = "Desktop Layout Detected";
+                layout.className = "layout desktop";
+            }
+        }
+
+        // Apply layout on page load
+        applyLayout();
+
+        // Optional: Reapply layout on window resize
+        window.addEventListener("resize", applyLayout);
+    </script>
+</body>
+</html>

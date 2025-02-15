@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Property Example</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .default {
+            cursor: default;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightgrey;
+        }
+
+        .pointer {
+            cursor: pointer;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightblue;
+        }
+
+        .move {
+            cursor: move;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightgreen;
+        }
+
+        .text {
+            cursor: text;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightyellow;
+        }
+
+        .disabled {
+            cursor: not-allowed;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightcoral;
+        }
+
+        .zoom-in {
+            cursor: zoom-in;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightpink;
+        }
+
+        .zoom-out {
+            cursor: zoom-out;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightpurple;
+        }
+
+        .custom {
+            cursor: url(images/pexels-danielle-block-472754360-28292874.jpg), auto;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>1. Default Cursor</h2>
+        <div class="default">
+            <p>This div has the default cursor (Arrow).</p>
+        </div>
+
+        <h2>2. Pointer Cursor</h2>
+        <div class="pointer">
+            <p>This div has the pointer cursor (Hand), usually for clickable items.</p>
+        </div>
+
+        <h2>3. Move Cursor</h2>
+        <div class="move">
+            <p>This div has the move cursor (Four-way arrow), indicating it can be moved.</p>
+        </div>
+
+        <h2>4. Text Cursor</h2>
+        <div class="text">
+            <p>This div has the text cursor (I-beam), indicating you can select text here.</p>
+        </div>
+
+        <h2>5. Not Allowed Cursor</h2>
+        <div class="disabled">
+            <p>This div has the not-allowed cursor, indicating that the action is not permitted.</p>
+        </div>
+
+        <h2>6. Zoom-In Cursor</h2>
+        <div class="zoom-in">
+            <p>This div has the zoom-in cursor, usually indicating that the user can zoom into an image or content.</p>
+        </div>
+
+        <h2>7. Zoom-Out Cursor</h2>
+        <div class="zoom-out">
+            <p>This div has the zoom-out cursor, usually indicating that the user can zoom out of content.</p>
+        </div>
+
+        <h2>8. Custom Cursor</h2>
+        <div class="custom">
+            <p>This div has a custom cursor (Image). Replace the URL with your cursor image.</p>
+        </div>
+    </div>
+
+</body>
+</html>

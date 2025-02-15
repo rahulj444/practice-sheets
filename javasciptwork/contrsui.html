@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person = {
+  name: "John",
+  age: 30,
+  isEmployed: true
+};
+document.writeln(person.name+"<br/>"); // Output: John
+document.writeln(person.age);  // Output: 30
+//nested Object
+let student = {
+  name: "Alice",
+  scores: {
+    math: 90,
+    english: 85
+  }
+};
+document.writeln(student.scores.math); // Output: 90
+let name = "Emma";
+let age = 25;
+
+let user = {
+  name, // Shorthand for name: name
+  age,  // Shorthand for age: age
+  greet() {
+    document.writeln(`Hi, I'm ${this.name}`);
+  }
+};
+
+document.writeln(user.name+`<br/>`);  // Output: Emma
+user.greet();           // Output: Hi, I'm Emma
+
+let defaults = { color: "red", wheels: 4 };
+let car = { ...defaults, brand: "Toyota" };
+
+for (let l in car) {
+  document.writeln(`${l}: ${car[l]}`+`<br/>`);
+}
+document.writeln(Object.keys(car)); // Output: ["color", "wheels", "brand"]
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

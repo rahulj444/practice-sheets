@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Multi-line Example</title>
+    <style>
+        #dynamicDiv {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Welcome to DOM Manipulation</h1>
+    <button id="addDiv">Add New Div</button>
+    <button id="changeTitle">Change Title</button>
+    <div id="container"></div>
+
+    <script>
+        // Select elements
+        const title = document.getElementById("title");
+        const addDivButton = document.getElementById("addDiv");
+        const changeTitleButton = document.getElementById("changeTitle");
+        const container = document.getElementById("container");
+
+        // Change title event
+        changeTitleButton.addEventListener("click", function () {
+            title.textContent = "Title Changed!";
+            title.style.color = "blue";
+            title.style.fontSize = "2em";
+        });
+
+        // Add a new div dynamically
+        addDivButton.addEventListener("click", function () {
+            const newDiv = document.createElement("div");
+            newDiv.id = "dynamicDiv";
+            newDiv.textContent = "I am a dynamically added div!";
+            newDiv.style.backgroundColor = getRandomColor();
+            container.appendChild(newDiv);
+        });
+
+        // Function to generate random colors
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

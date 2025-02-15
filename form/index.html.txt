@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register of Receipts of Timber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>FORM NO. 3<br>REGISTER OF RECEIPTS OF TIMBER</h2>
+        <div class="filters">
+            <input type="text" placeholder="Enter Plantation">
+            <input type="text" placeholder="Enter Depot Stock No">
+            <input type="text" placeholder="Enter Species">
+            <input type="text" placeholder="Enter Pass No">
+            <input type="text" placeholder="Enter BIT">
+            <button>🔄</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>SL. NO.</th>
+                    <th>PLANTATION</th>
+                    <th>DEPOT STOCK NO</th>
+                    <th>SPECIES</th>
+                    <th>LENGTH (CM)</th>
+                    <th>GIRTH (CM)</th>
+                    <th>VOLUME (M³)</th>
+                    <th>PASS NO</th>
+                    <th>PASS DATE</th>
+                    <th>BIT</th>
+                    <th>REMARKS</th>
+                    <th>CURRENT LOT</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1958 TP DEER PARK UNDER WALAYAR RANGE</td>
+                    <td>4816/24</td>
+                    <td>TEAM/LM/II/C</td>
+                    <td>540</td>
+                    <td>105</td>
+                    <td>0.372</td>
+                    <td>276/23-24</td>
+                    <td>29/11/2024</td>
+                    <td>BACKYARD</td>
+                    <td>BEND</td>
+                    <td>LOT 10</td>
+                    <td>
+                        <button>Move to Lot</button>
+                        <button>Unassign</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button>Create a Lot</button>
+            <button>Export</button>
+        </div>
+    </div>
+</body>
+</html>

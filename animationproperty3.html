@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            animation: scaleBox 3s ease-in-out infinite;
+        }
+
+        @keyframes scaleBox {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

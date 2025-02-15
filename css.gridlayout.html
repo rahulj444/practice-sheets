@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            border: 2px solid black;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: auto;
+            border: 2px solid #0f0be5;
+            padding: 10px;
+            justify-content: center;
+            grid-template-rows: repeat(2,150px);
+            grid-template-columns: repeat(3,1fr);
+            flex-direction:  row-reverse;/* here we have to change according to the follows */ 
+
+        }
+        .item {
+            width: calc(33.33% - 20px); 
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            border-radius: 8px;
+        }
+        .box1{background-color: red;}
+        .box2{background-color: rgb(19, 18, 18);}
+        .box3{background-color: rgb(232, 14, 225);}
+        .box4{background-color: red;}
+        .box5{background-color: red;}
+        .box6{background-color: rgb(33, 17, 214);}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="color: blue;">1</div>
+        <div class="item" style="color: rgb(201, 14, 55);">2</div>
+        <div class="item" style="color: blue;">3</div>
+        <div class="item" style="color: blue;">4</div>
+        <div class="item" style="color: rgb(11, 11, 14);">5</div>
+        <div class="item" style="color: rgb(232, 22, 22);">6</div>
+        <div class="item" style="color: blue;">7</div>
+        <div class="item" style="color: blue;">8</div>
+        <div class="item" style="color: rgb(25, 24, 24);">9</div>
+        <div class="item" style="color: blue;">C</div>
+        <div class="item" style="color: blue;">0</div>
+        <div class="item" style="color: blue;">00</div>
+    
+</body>
+</html>

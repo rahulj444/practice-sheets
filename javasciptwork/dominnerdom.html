@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>innerHTML Example</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is the initial content.</p>
+  </div>
+
+  <button onclick="changeContent()">Change Content</button>
+  <button onclick="changeContent2()">Change Content</button>
+
+  <script>
+    function changeContent() {
+      const myDiv = document.getElementById("myDiv");
+      myDiv.innerHTML = "<h2>New content with <h2> tag!</h2>";
+      
+    }
+    function changeContent2() {
+      const myDiv = document.getElementById("myDiv");
+      myDiv2.innerHTML = "<h2>New content with <h2> tag!</h2>";
+      
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .title {
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+        .output {
+            color: #333;
+            padding-left: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Object Methods</h1>
+    <div id="output"></div>
+    
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        // Helper function to create a section
+        function createSection(title, exampleDescription, exampleCode, result) {
+            const section = document.createElement("div");
+            section.className = "section";
+
+            const titleElem = document.createElement("div");
+            titleElem.className = "title";
+            titleElem.textContent = title;
+
+            const descriptionElem = document.createElement("div");
+            descriptionElem.textContent = exampleDescription;
+
+            const codeElem = document.createElement("pre");
+            codeElem.textContent = `Example:\n${exampleCode}`;
+
+            const resultElem = document.createElement("div");
+            resultElem.className = "output";
+            resultElem.textContent = `Result: ${result}`;
+
+            section.appendChild(titleElem);
+            section.appendChild(descriptionElem);
+            section.appendChild(codeElem);
+            section.appendChild(resultElem);
+
+            outputDiv.appendChild(section);
+        }
+
+        // 1. Object.keys()
+        let obj = { name: "Alice", age: 25, city: "New York" };
+        createSection(
+            "Object.keys()",
+            "Returns an array of an object's keys.",
+            "Object.keys({ name: 'Alice', age: 25, city: 'New York' })",
+            JSON.stringify(Object.keys(obj))
+        );
+
+        // 2. Object.values()
+        createSection(
+            "Object.values()",
+            "Returns an array of an object's values.",
+            "Object.values({ name: 'Alice', age: 25, city: 'New York' })",
+            JSON.stringify(Object.values(obj))
+        );
+
+        // 3. Object.entries()
+        createSection(
+            "Object.entries()",
+            "Returns an array of [key, value] pairs from the object.",
+            "Object.entries({ name: 'Alice', age: 25, city: 'New York' })",
+            JSON.stringify(Object.entries(obj))
+        );
+
+        // 4. Object.assign()
+        let target = { a: 1 };
+        let source = { b: 2, c: 3 };
+        Object.assign(target, source);
+        createSection(
+            "Object.assign()",
+            "Copies properties from one or more source objects to a target object.",
+            `let target = { a: 1 };\nlet source = { b: 2, c: 3 };\nObject.assign(target, source);`,
+            JSON.stringify(target)
+        );
+
+        // 5. Object.freeze()
+        let frozenObj = { name: "Bob" };
+        Object.freeze(frozenObj);
+        try {
+            frozenObj.name = "Alice"; // Will not update
+        } catch (e) {}
+        createSection(
+            "Object.freeze()",
+            "Prevents modification of an object's properties.",
+            "Object.freeze({ name: 'Bob' })\nobj.name = 'Alice';",
+            JSON.stringify(frozenObj)
+        );
+
+        // 6. Object.seal()
+        let sealedObj = { name: "Charlie" };
+        Object.seal(sealedObj);
+        sealedObj.name = "Dave"; // Can modify existing
+        sealedObj.age = 30;      // Will not add new property
+        createSection(
+            "Object.seal()",
+            "Prevents adding or deleting properties but allows modification of existing properties.",
+            "Object.seal({ name: 'Charlie' })",
+            JSON.stringify(sealedObj)
+        );
+
+        // 7. Object.is()
+        createSection(
+            "Object.is()",
+            "Compares two values and determines if they are the same.",
+            "Object.is(NaN, NaN)",
+            Object.is(NaN, NaN).toString()
+        );
+
+        // 8. Object.create()
+        let proto = { greet: function() { return "Hello!"; } };
+        let createdObj = Object.create(proto);
+        createSection(
+            "Object.create()",
+            "Creates a new object with the specified prototype.",
+            "let proto = { greet: function() { return 'Hello!'; } };\nlet obj = Object.create(proto);\nobj.greet();",
+            createdObj.greet()
+        );
+
+        // 9. Object.hasOwn()
+        let ownObj = { color: "blue" };
+        createSection(
+            "Object.hasOwn()",
+            "Checks if the object has the specified property as its own property (not inherited).",
+            "Object.hasOwn({ color: 'blue' }, 'color')",
+            Object.hasOwn(ownObj, "color").toString()
+        );
+    </script>
+</body>
+</html>

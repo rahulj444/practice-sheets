@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen App</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d51818;
+        }
+        #app {
+            width: 80%;
+            height: 80%;
+            border: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(221, 208, 208);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">App Content</div>
+
+    <script>
+        const app = document.getElementById("app");
+
+        function adjustAppSize() {
+            app.style.width = screen.availWidth + "px";
+            app.style.height = screen.availHeight + "px";
+        }
+
+        // Adjust app size on load
+        adjustAppSize();
+
+        // Adjust app size when window is resized
+        window.addEventListener("resize", adjustAppSize);
+        
+    </script>
+</body>
+</html>

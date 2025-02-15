@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Depth Example</title>
+</head>
+<body>
+    <h1>Dynamic Image Loading</h1>
+    <img id="image" alt="Dynamic Image" style="max-width: 100%; height: auto;" />
+
+    <script>
+        const image = document.getElementById("image");
+
+        if (screen.pixelDepth > 24) {
+            image.src = "images/pexels-comoyuli-29310856.jpg"; // Replace with actual high-quality image path
+            image.alt = "High-quality image loaded";
+        } else {
+            image.src = "images/low-quality.jpg"; // Replace with actual low-quality image path
+            image.alt = "Low-quality image loaded";
+        }
+    </script>
+</body>
+</html>
